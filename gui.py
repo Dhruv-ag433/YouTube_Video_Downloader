@@ -18,7 +18,7 @@ url_enter.pack(pady = 10)
 # Dropdown box for Video Quality
 tk.Label(root, text = "Select Video Quality:").pack(pady = 10)
 quality_var = tk.StringVar(value = '1080')
-quality_option = ['360', '480', '720', '1080', '1440']
+quality_option = ['360', '480', '720', '1080', '1440', '2160']
 quality_dropdown = ttk.Combobox(root, textvariable = quality_var, values = quality_option)
 quality_dropdown.pack(pady = 10)
 
