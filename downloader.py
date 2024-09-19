@@ -11,6 +11,8 @@ def convert_to_gif(filepath):
 
 def download_video(url, quality, file_format, file_path):
     
+    ffmpeg_path = os.path.join(os.getcwd(), 'ffmpeg', 'bin', 'ffmpeg.exe')
+    
     if not url:
         messagebox.showerror("Input Error", "Please enter a URL.")
         return
@@ -24,7 +26,7 @@ def download_video(url, quality, file_format, file_path):
             ydl_opts = {
                 'format': 'bestaudio/best',
                 'outtmpl': file_path,
-                'ffmpeg_location': 'C:/ffmpeg/bin',
+                'ffmpeg_location': ffmpeg_path,
                 'postprocessor': [{
                     'key': 'FFmpegExtractAudio',
                     'preferredcodec': 'mp3',
@@ -35,13 +37,13 @@ def download_video(url, quality, file_format, file_path):
             ydl_opts = {
                 'format': f'bestvideo[height <= {quality}]+bestaudio/best',
                 'outtmpl': file_path,
-                'ffmpeg_location': 'C:/ffmpeg/bin',
+                'ffmpeg_location': ffmpeg_path,
             }
         else:
             ydl_opts = {
                 'format': f'bestvideo[height <= {quality}]+bestaudio/best',
                 'outtmpl': file_path,
-                'ffmpeg_location': 'C:/ffmpeg/bin',
+                'ffmpeg_location': ffmpeg_path,
                 'merge_output_format': 'mp4'
             }
         
