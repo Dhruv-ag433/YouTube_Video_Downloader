@@ -1,7 +1,21 @@
 from tkinter import messagebox
 import yt_dlp
 import os
+import subprocess
+import logging
 
+logging.basicConfig(level=logging.WARNING, filename='app.log',
+                    format = '%(asctime)s - %(levelname)s - %(message)s')
+
+def check_ffmpeg():
+    
+    try:
+        subprocess.run(['ffmpeg', '-version'], stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+        return True
+    except FileNotFoundError:
+        logging.warning("FFmpeg not found. Install it from https://www.gyan.dev/ffmpeg/builds/")
+        return False
+    
 # To convert Video into GIF    
 def convert_to_gif(filepath):
     gif_output = filepath.replace('.mp4', '.gif')
@@ -11,7 +25,11 @@ def convert_to_gif(filepath):
 
 def download_video(url, quality, file_format, file_path):
     
-    ffmpeg_path = os.path.join(os.getcwd(), 'ffmpeg', 'bin', 'ffmpeg.exe')
+    if not check_ffmpeg():
+        messagebox.showerror("FFmpeg Error",
+                             "FFmpeg is not installed or not found in the system PATH.\n"
+                             "Please download it from: https://www.gyan.dev/ffmpeg/builds/")
+        return 
     
     if not url:
         messagebox.showerror("Input Error", "Please enter a URL.")
@@ -20,13 +38,12 @@ def download_video(url, quality, file_format, file_path):
     if not file_path:
         messagebox.showerror("Save Error", "No file path selected.")
         return
-
+    
     try:
         if file_format == 'Audio':
             ydl_opts = {
                 'format': 'bestaudio/best',
                 'outtmpl': file_path,
-                'ffmpeg_location': ffmpeg_path,
                 'postprocessor': [{
                     'key': 'FFmpegExtractAudio',
                     'preferredcodec': 'mp3',
@@ -37,13 +54,11 @@ def download_video(url, quality, file_format, file_path):
             ydl_opts = {
                 'format': f'bestvideo[height <= {quality}]+bestaudio/best',
                 'outtmpl': file_path,
-                'ffmpeg_location': ffmpeg_path,
             }
         else:
             ydl_opts = {
                 'format': f'bestvideo[height <= {quality}]+bestaudio/best',
                 'outtmpl': file_path,
-                'ffmpeg_location': ffmpeg_path,
                 'merge_output_format': 'mp4'
             }
         
