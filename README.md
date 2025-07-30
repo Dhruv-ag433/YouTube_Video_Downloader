@@ -63,7 +63,7 @@ This project is for educational and personal use only. Redistribution of copyrig
 
 **Dhruv Agarwal**  
 📧 dhruv.agarwal433@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/dhruvagrawal433)
+🔗 [LinkedIn](https://www.linkedin.com/in/dhruvagrawal433/)  
 
 ---
 
