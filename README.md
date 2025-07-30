@@ -1,38 +1,71 @@
-THIS IS THE PROGRAM TO DONWLOAD YOUTUBE VIDEOS "FOR FREE".
 
-# STEPS TO INSTALL THE APPLICATION:
-1. OPEN THE "DIST" FOLDER.
-2. DOWNLOAD THE .exe FILE ON YOUR SYSTEM.
-3. RUN THE FILE AND ENJOY THE DOWNLOADED MEDIA🔓🎬
+# 🎥 YouTube Video Downloader (Desktop App)
 
-# REQUIREMENTS:
-1. THERE MUST BE "FFmpeg" INSTALLED ON YOUR SYSTEM.
-2. IF NOT INSTALLED, DOWNLOAD IT FROM https://www.gyan.dev/ffmpeg/builds/.
-3. DOWNLOAD THE LATEST "ffmpeg-git-full.7z" VERSION.
+A lightweight and user-friendly desktop application to download YouTube videos **for free** in various formats using `yt-dlp` and `FFmpeg`.
 
-# SETUP:
-1. Locate the FFmpeg Folder:
+---
 
-After installation, ask the user to locate the folder where ffmpeg.exe is stored. This is usually in the bin folder of the unzipped directory.
+## 🚀 Installation Guide
 
-2. Open System Environment Variables:
+### 🧾 Steps to Install:
+1. Open the `dist/` folder in the project directory.
+2. Download the `.exe` file to your Windows system.
+3. Double-click to run the app and enjoy downloading media content! 🎬
 
-Right-click on "This PC" or "My Computer" on the desktop or in File Explorer.
-Select "Properties."
-Click on "Advanced system settings" on the left side.
-In the System Properties window, click the "Environment Variables" button.
+---
 
-3. Edit the PATH Variable:
+## ⚙️ Requirements
 
-In the Environment Variables window, find the "Path" variable in the "System variables" section and select it.
-Click "Edit."
+- **FFmpeg** must be installed and properly configured in your system's PATH.
 
-4. Add the FFmpeg Path:
+### 🔗 Download FFmpeg:
+- Go to [FFmpeg Builds](https://www.gyan.dev/ffmpeg/builds/)
+- Download the latest version: `ffmpeg-git-full.7z`
+- Extract it to a known location on your system (e.g., `C:\ffmpeg`)
 
-In the Edit Environment Variable window, click "New" and paste the path to the folder where ffmpeg.exe is located (e.g., C:\ffmpeg\bin).
-Click "OK" to close the Edit Environment Variable window.
+---
 
-5. Apply Changes:
+## 🔧 FFmpeg Setup Instructions
 
-Click "OK" in the Environment Variables window to save your changes.
-Click "OK" again in the System Properties window to close it.
+### 1. Locate FFmpeg Folder:
+After extracting the zip, locate `ffmpeg.exe` inside the `bin` folder.
+
+### 2. Set FFmpeg in System PATH:
+Follow these steps to add FFmpeg to your system's environment variables:
+
+- Right-click on **This PC** or **My Computer** > **Properties**
+- Click **Advanced system settings**
+- In the System Properties window, click **Environment Variables**
+- Under **System variables**, find and select **Path**, then click **Edit**
+- Click **New** and paste the path to `ffmpeg.exe` (e.g., `C:\ffmpeg\bin`)
+- Click **OK** on all dialogs to save and apply the changes
+
+---
+
+## ✅ You're All Set!
+
+Once FFmpeg is set up and the `.exe` is launched, you can start downloading YouTube videos easily.
+
+If you face any issues, please make sure:
+- Your internet connection is stable
+- The video URL is correct
+- FFmpeg is properly installed and in the system PATH
+
+---
+
+## 📄 License
+
+This project is for educational and personal use only. Redistribution of copyrighted content is prohibited.
+
+---
+
+## 🙋‍♂️ Author
+
+**Dhruv Agarwal**  
+📧 dhruvagarwal.work@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/your-link-here)  
+💼 [Portfolio](https://your-portfolio-link.com) *(optional)*
+
+---
+
+⭐ If you find this useful, please consider starring the repo!
