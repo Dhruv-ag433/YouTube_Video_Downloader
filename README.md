@@ -62,9 +62,8 @@ This project is for educational and personal use only. Redistribution of copyrig
 ## 🙋‍♂️ Author
 
 **Dhruv Agarwal**  
-📧 dhruvagarwal.work@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/your-link-here)  
-💼 [Portfolio](https://your-portfolio-link.com) *(optional)*
+📧 dhruv.agarwal433@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/dhruvagrawal433)
 
 ---
 
